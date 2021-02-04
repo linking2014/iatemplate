@@ -47,6 +47,7 @@ h6 {
   margin-top: calc((29 / 16) * 1em);
   font-size: inherit;
   line-height: inherit;
+  color: #005CC5;
 }
 
 h1,
@@ -124,7 +125,16 @@ ul > li:before {
   content: "– ";
   float: left; /* Take out of flow to avoid changing left edge alignment or pushing child paragraph down */
   margin-left: calc((20 / 16) * -1em); /* -1.1111em = 20px @ font-size: 18px. em works better for RWD than % */
-  color: #E36209
+  color: #E36209;
+  font-weight: bold;
+}
+
+ol > li::marker {
+  /*content: "– ";
+  float: left; !* Take out of flow to avoid changing left edge alignment or pushing child paragraph down *!
+  margin-left: calc((20 / 16) * -1em); !* -1.1111em = 20px @ font-size: 18px. em works better for RWD than % *!*/
+  color: #E36209;
+  font-weight: bold;
 }
 
 /* Indent ordered lists in blockquotes */
