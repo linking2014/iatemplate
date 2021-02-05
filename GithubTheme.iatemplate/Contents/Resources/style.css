@@ -130,9 +130,6 @@ ul > li:before {
 }
 
 ol > li::marker {
-  /*content: "– ";
-  float: left; !* Take out of flow to avoid changing left edge alignment or pushing child paragraph down *!
-  margin-left: calc((20 / 16) * -1em); !* -1.1111em = 20px @ font-size: 18px. em works better for RWD than % *!*/
   color: #E36209;
   font-weight: bold;
 }

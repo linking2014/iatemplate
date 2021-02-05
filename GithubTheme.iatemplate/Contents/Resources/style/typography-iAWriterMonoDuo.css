@@ -69,7 +69,7 @@ html {
 }
 
 @media print {
-  html {    
+  html {
     --line-height-base: 170.0;
   }
 }
@@ -207,13 +207,13 @@ html {
   html.night-mode {
     --wght-dark-adjustment: -20;
   }
-  html.content-size-4xs:lang(x-default)) {
+  html.content-size-4xs:lang(x-default) {
     --wght: 490;
   }
-  html.content-size-3xs:lang(x-default)) {
+  html.content-size-3xs:lang(x-default) {
     --wght: 482;
   }
-  html.content-size-2xs:lang(x-default)) {
+  html.content-size-2xs:lang(x-default) {
     --wght: 475;
   }
   html.content-size-xs:lang(x-default) {
