@@ -314,11 +314,13 @@ figure pre {
 
 pre {
   padding: 1rem;
-  overflow: hidden;
+  /*overflow: hidden;*/
+  overflow: auto;
 }
 
 pre code {
   padding: 0;
+  white-space: pre;
 }
 
 code,
