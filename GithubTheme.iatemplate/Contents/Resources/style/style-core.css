@@ -201,6 +201,15 @@ img {
   max-width: 100%;
   height: auto;
   vertical-align: top;
+  margin-top: 1em;
+  border: solid 0.4em #fff;
+}
+
+figure {
+  /*margin-block-start: 1em;*/
+  /*margin-block-end: 1em;*/
+  margin-block-start: 0 !important;
+  margin-top: 0 !important;
 }
 
 figure img {
