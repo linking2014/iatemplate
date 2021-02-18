@@ -47,18 +47,18 @@ h6 {
   margin-top: calc((29 / 16) * 1em);
   font-size: inherit;
   line-height: inherit;
-  color: #005CC5;
 }
 
 h1,
 h2 {
   margin-bottom: calc((29 / 16) * 1em);
+  color: #005CC5;
 }
 
 h3,
 h4,
 h5 {
-  margin-bottom: 0;
+  /*margin-bottom: 0;*/
 }
 
 h4 {
@@ -107,6 +107,7 @@ hr + h6 {
 ul,
 ol {
   padding-left: calc((34 / 14) * 1em); /* 2.4285em = 34px for font-size: 14px. em works better for RWD than % */
+  padding-left: calc((28 / 14) * 1em); /* 2.4285em = 34px for font-size: 14px. em works better for RWD than % */
 }
 
 @media screen and (min-width: 760px) {
@@ -125,11 +126,27 @@ ul > li:before {
   content: "– ";
   float: left; /* Take out of flow to avoid changing left edge alignment or pushing child paragraph down */
   margin-left: calc((20 / 16) * -1em); /* -1.1111em = 20px @ font-size: 18px. em works better for RWD than % */
+  margin-left: calc((32 / 16) * -1em); /* -1.1111em = 20px @ font-size: 18px. em works better for RWD than % */
   color: #E36209;
   font-weight: bold;
 }
 
+ol {
+  list-style: none;
+  counter-reset: order;
+}
+
 ol > li::marker {
+  color: #E36209;
+  font-weight: bold;
+}
+
+ol > li:before {
+  counter-increment: order;      /* 增加计数器值 */
+  content: counter(order) " "; /* 显示计数器 */
+  float: left; /* Take out of flow to avoid changing left edge alignment or pushing child paragraph down */
+  margin-left: calc((20 / 16) * -1em); /* -1.1111em = 20px @ font-size: 18px. em works better for RWD than % */
+  margin-left: calc((32 / 16) * -1em); /* -1.1111em = 20px @ font-size: 18px. em works better for RWD than % */
   color: #E36209;
   font-weight: bold;
 }
