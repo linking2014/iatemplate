@@ -15,7 +15,8 @@
 @import url("style/typography-iAWriterMonoDuo.css");
 
 body {
-  max-width: 38em;
+  /*max-width: 38em;*/
+  max-width: 52em;
 }
 
 @media print {
@@ -44,6 +45,7 @@ h3,
 h4,
 h5,
 h6 {
+  position: relative;
   margin-top: calc((29 / 16) * 1em);
   font-size: inherit;
   line-height: inherit;
@@ -53,6 +55,48 @@ h1,
 h2 {
   margin-bottom: calc((29 / 16) * 1em);
   color: #005CC5;
+}
+
+h1:before,
+h2:before,
+h3:before,
+h4:before,
+h5:before,
+h6:before {
+  position: absolute;
+  right: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  margin-right: 0.8em;
+  color: #c6ccd2;
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+}
+
+h1:before {
+  content: 'h1';
+}
+
+h2:before {
+  content: 'h2';
+}
+
+h3:before {
+  content: 'h3';
+}
+
+h4:before {
+  content: 'h4';
+}
+
+h5:before {
+  content: 'h5';
+}
+
+h6:before {
+  content: 'h6';
 }
 
 h3,
@@ -117,6 +161,12 @@ ol {
   }
 }
 
+/* 列表嵌套 */
+li:not(:last-child) ul ,
+li:not(:last-child) ol {
+  padding-bottom: 0.8em;
+}
+
 /* Unordered lists use custom bullets: see core.css */
 ul {
   list-style: none;
@@ -125,7 +175,7 @@ ul {
 ul > li:before {
   content: "– ";
   float: left; /* Take out of flow to avoid changing left edge alignment or pushing child paragraph down */
-  margin-left: calc((20 / 16) * -1em); /* -1.1111em = 20px @ font-size: 18px. em works better for RWD than % */
+  /*margin-left: calc((20 / 16) * -1em); !* -1.1111em = 20px @ font-size: 18px. em works better for RWD than % *!*/
   margin-left: calc((32 / 16) * -1em); /* -1.1111em = 20px @ font-size: 18px. em works better for RWD than % */
   color: #E36209;
   font-weight: bold;
@@ -234,7 +284,13 @@ table {
   }
 
   blockquote {
-    border-left-color: #1a1a1a;
+    /*border-left-color: #1a1a1a;*/
+    border-left: solid 2px #008800;
+    /*background-color: rgba(0, 136, 0, 0.12);*/
+  }
+
+  blockquote p {
+    color: #008000;
   }
 }
 

@@ -7,6 +7,24 @@
     <link rel="stylesheet" media="all" href="style.css">
     <link rel="stylesheet" media="all" href="override.css">
     <meta name="viewport" content="initial-scale=1, viewport-fit=cover">
+    <link rel="stylesheet" href="hljs/styles/color-brewer.min.css">
+    <!--<link rel="stylesheet" href="hljs/styles/atom-one-light.min.css">-->
+    <!--<link rel="stylesheet" href="hljs/styles/base16/tomorrow.min.css">-->
+    <!--<link rel="stylesheet" href="hljs/styles/a11y-light.min.css">-->
+    <!--<link rel="stylesheet" href="hljs/styles/xcode.min.css">-->
+    <!--<link rel="stylesheet" href="hljs/styles/base16/google-light.min.css">-->
+    <!--<link rel="stylesheet" href="hljs/styles/github.min.css">-->
+    <script src="hljs/highlight.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            document.body.addEventListener('ia-writer-change', function(event) {
+                let codeBlocks = document.querySelectorAll('pre code');
+                [].forEach.call(codeBlocks, function(codeBlock) {
+                    hljs.highlightBlock(codeBlock);
+                });
+            });
+        });
+    </script>
 </head>
 <body data-document>&nbsp;</body>
 </html>

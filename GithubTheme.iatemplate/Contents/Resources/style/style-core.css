@@ -102,7 +102,10 @@ body {
 
 html.mac {
   /*background-color: #F6F8FA;*/
-  background-color: #F7F7F7;
+  /*background-color: #F7F7F7;*/
+  /*background-color: #FcFcFc;*/
+  /*background-color: #FdFdFd;*/
+  background-color: #FFF;
 }
 
 html.mac body {
@@ -308,13 +311,16 @@ td:last-of-type {
 pre,
 code,
 kbd {
-  border-radius: 2px;
+  /*border-radius: 2px;*/
+  border-radius: 3px;
   white-space: pre-wrap;
-  background-color: rgba(36, 36, 36, 0.055);
+  /*background-color: rgba(36, 36, 36, 0.055);*/
+  background-color: #F6F8FA;
+
 }
 
 pre code {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 figure pre {
@@ -322,19 +328,22 @@ figure pre {
 }
 
 pre {
-  padding: 1rem;
+  /*padding: 1rem;*/
   /*overflow: hidden;*/
   overflow: auto;
 }
 
 pre code {
+  margin: 0;
   padding: 0;
   white-space: pre;
 }
 
 code,
 kbd {
-  padding: 0.08333em 0.1667em 0.1667em; /* ~1px 2px 2px when font-size: 12px, taking 1px border into account */
+  margin: 0 0.3334em;
+  /*padding: 0.08333em 0.1667em 0.1667em; !* ~1px 2px 2px when font-size: 12px, taking 1px border into account *!*/
+  padding: 0.08333em 0.3334em 0.1667em; /* ~1px 2px 2px when font-size: 12px, taking 1px border into account */
 }
 
 /* Prevent code line-height increasing heading line-height */
