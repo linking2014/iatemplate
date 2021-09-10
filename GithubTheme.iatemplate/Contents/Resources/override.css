@@ -1,2 +1,33 @@
-
 @import url("style/style-lang.css");
+
+.theme-github table {
+  /*overflow: auto;*/
+  display: block;
+  width: 100%;
+  border-top: none;
+  border-bottom: none;
+}
+
+.theme-github table tbody {
+  border-top: none;
+}
+
+.theme-github table th {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.theme-github table th,
+.theme-github table td {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+.theme-github table tr {
+  background-color: #fff;
+  /*border-top: 1px solid #c6cbd1;*/
+}
+
+.theme-github table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
