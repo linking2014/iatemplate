@@ -1,34 +1,41 @@
 @import url("style/style-lang.css");
 
-.document-body table {
+.document-body {
+  /*--color-text-link: #0969da;*/
+  --color-text-link: #005CC5;
+  --color-bg-tertiary: #f6f8fa;
+}
+
+table {
   /*overflow: auto;*/
   display: block;
   width: 100%;
   border-top: none;
   border-bottom: none;
+  font-size: calc((12 / 13) * 1em); /* 0.875em = 14px @ font-size: 16px */
 }
 
-.document-body table tbody {
+table tbody {
   border-top: none;
 }
 
-.document-body table th {
+table th {
   font-weight: 600;
   white-space: nowrap;
 }
 
-.document-body table th,
-.document-body table td {
+table th,
+table td {
   padding: 6px 13px;
   border: 1px solid #dfe2e5;
 }
 
-.document-body table tr {
+table tr {
   background-color: #fff;
   /*border-top: 1px solid #c6cbd1;*/
 }
 
-.document-body table tr:nth-child(2n) {
+table tr:nth-child(2n) {
   background-color: #f6f8fa;
 }
 
@@ -42,6 +49,15 @@ html.mac {
 
 body {
   max-width: 52em;
+}
+
+a {
+  color: var(--color-text-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 h1,
@@ -173,7 +189,7 @@ code,
 kbd {
   border-radius: 3px;
   /*background-color: rgba(36, 36, 36, 0.055);*/
-  background-color: #F6F8FA;
+  background-color: var(--color-bg-tertiary);
 }
 
 pre code {
@@ -181,6 +197,7 @@ pre code {
   margin: 0;
   padding: 0;
   white-space: pre;
+  font-size: calc((12 / 13) * 1em); /* 0.875em = 14px @ font-size: 16px */
 }
 
 pre {
@@ -192,6 +209,7 @@ code,
 kbd {
   margin: 0 0.3334em;
   padding: 0.08333em 0.3334em 0.1667em; /* ~1px 2px 2px when font-size: 12px, taking 1px border into account */
+  font-size: calc((12 / 13) * 1em); /* 0.875em = 14px @ font-size: 16px */
 }
 
 .task-list-item {

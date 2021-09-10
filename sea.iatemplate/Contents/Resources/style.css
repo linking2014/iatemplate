@@ -164,7 +164,8 @@ caption {
 /* Tables */
 
 table {
-  font-size: calc((14 / 16) * 1em); /* 0.875em = 14px @ font-size: 16px */
+  /*font-size: calc((14 / 16) * 1em); !* 0.875em = 14px @ font-size: 16px *!*/
+  font-size: calc((12 / 13) * 1em); /* 0.875em = 14px @ font-size: 16px */
   line-height: calc(24 / 14); /* 1.7143 = 24px @ font-size: 14px */
 }
 
