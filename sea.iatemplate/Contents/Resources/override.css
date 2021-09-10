@@ -1,2 +1,207 @@
-
 @import url("style/style-lang.css");
+
+.document-body table {
+  /*overflow: auto;*/
+  display: block;
+  width: 100%;
+  border-top: none;
+  border-bottom: none;
+}
+
+.document-body table tbody {
+  border-top: none;
+}
+
+.document-body table th {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.document-body table th,
+.document-body table td {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+.document-body table tr {
+  background-color: #fff;
+  /*border-top: 1px solid #c6cbd1;*/
+}
+
+.document-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+html.mac {
+  /*background-color: #F6F8FA;*/
+  /*background-color: #F7F7F7;*/
+  /*background-color: #FcFcFc;*/
+  /*background-color: #FdFdFd;*/
+  background-color: #FFF;
+}
+
+body {
+  max-width: 52em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+}
+
+h1,
+h2 {
+  color: #005CC5;
+}
+
+h1:before,
+h2:before,
+h3:before,
+h4:before,
+h5:before,
+h6:before {
+  position: absolute;
+  right: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  margin-right: 0.8em;
+  color: #c6ccd2;
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+}
+
+h1:before {
+  content: 'h1';
+}
+
+h2:before {
+  content: 'h2';
+}
+
+h3:before {
+  content: 'h3';
+}
+
+h4:before {
+  content: 'h4';
+}
+
+h5:before {
+  content: 'h5';
+}
+
+h6:before {
+  content: 'h6';
+}
+
+h3,
+h4,
+h5 {
+  /*margin-bottom: 0;*/
+}
+
+ul,
+ol {
+  padding-left: calc((28 / 14) * 1em); /* 2.4285em = 34px for font-size: 14px. em works better for RWD than % */
+}
+
+/* 列表嵌套 */
+li:not(:last-child) ul ,
+li:not(:last-child) ol {
+  padding-bottom: 0.8em;
+}
+
+ul > li:before {
+  margin-left: calc((32 / 16) * -1em); /* -1.1111em = 20px @ font-size: 18px. em works better for RWD than % */
+  color: #E36209;
+  font-weight: bold;
+}
+
+ol {
+  list-style: none;
+  counter-reset: order;
+}
+
+ol > li::marker {
+  color: #E36209;
+  font-weight: bold;
+}
+
+ol > li:before {
+  counter-increment: order;      /* 增加计数器值 */
+  content: counter(order) " "; /* 显示计数器 */
+  float: left; /* Take out of flow to avoid changing left edge alignment or pushing child paragraph down */
+  margin-left: calc((32 / 16) * -1em); /* -1.1111em = 20px @ font-size: 18px. em works better for RWD than % */
+  color: #E36209;
+  font-weight: bold;
+}
+
+
+/* Intended border color from 200px */
+@media screen and (min-width: 200px) {
+  blockquote {
+    border-left: solid 2px #008800;
+  }
+
+  blockquote p {
+    color: #008000;
+  }
+}
+
+
+img {
+  /*margin-top: 1em;*/
+  /*border: solid 0.4em #fff;*/
+  margin: 1em auto 0;
+}
+
+figure {
+  /*margin-block-start: 1em;*/
+  /*margin-block-end: 1em;*/
+  margin-block-start: 0 !important;
+  margin-top: 0 !important;
+}
+
+pre,
+code,
+kbd {
+  border-radius: 3px;
+  /*background-color: rgba(36, 36, 36, 0.055);*/
+  background-color: #F6F8FA;
+}
+
+pre code {
+  background-color: transparent !important;
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+}
+
+pre {
+  padding: 0;
+  overflow: auto;
+}
+
+code,
+kbd {
+  margin: 0 0.3334em;
+  padding: 0.08333em 0.3334em 0.1667em; /* ~1px 2px 2px when font-size: 12px, taking 1px border into account */
+}
+
+.task-list-item {
+  --checkbox-size: calc(1em * var(--line-height));
+}
+
+ol .task-list-item {
+  --checkbox-counter-offset: calc(0.5 * var(--checkbox-size));
+}
+
+.task-list-item-checkbox {
+  margin: 0 0 0 calc(-1 * var(--checkbox-size)); /* 0s to overwrite user agent styles */
+}
