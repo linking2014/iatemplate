@@ -1,68 +1,76 @@
 
+/* Font Size */
+
+@media print {
+  html {
+    --font-size: 12px;
+  }
+}
+
 /* Line Height */
 
 html {
-  --line-height-base: 160.0;
+  --line-height-base: 170.0;
   --line-height-base-viewport-adjustment: 0;
 }
 
 @media screen {
   html.content-size-4xs {
-    --line-height-base: 170.0;
+    --line-height-base: 180.0;
   }
   html.content-size-3xs {
-    --line-height-base: 169.0;
+    --line-height-base: 179.0;
   }
   html.content-size-2xs {
-    --line-height-base: 168.0;
+    --line-height-base: 179.0;
   }
   html.content-size-xs {
-    --line-height-base: 167.0;
+    --line-height-base: 178.0;
   }
   html.content-size-s {
-    --line-height-base: 166.0;
+    --line-height-base: 177.0;
   }
   html.content-size-m {
-    --line-height-base: 165.0;
+    --line-height-base: 176.0;
   }
   html.content-size-l {
-    --line-height-base: 164.0;
+    --line-height-base: 175.0;
   }
   html.content-size-xl {
-    --line-height-base: 163.0;
+    --line-height-base: 173.0;
   }
   html.content-size-2xl {
-    --line-height-base: 159.0;
+    --line-height-base: 169.0;
   }
   html.content-size-3xl {
-    --line-height-base: 155.0;
+    --line-height-base: 165.0;
   }
   html.content-size-4xl {
-    --line-height-base: 151.0;
+    --line-height-base: 161.0;
   }
   html.content-size-5xl {
-    --line-height-base: 147.0;
+    --line-height-base: 157.0;
   }
   html.content-size-6xl {
-    --line-height-base: 142.0;
+    --line-height-base: 151.0;
   }
   html.content-size-7xl {
-    --line-height-base: 137.0;
+    --line-height-base: 145.0;
   }
   html.content-size-8xl {
-    --line-height-base: 132.0;
+    --line-height-base: 139.0;
   }
   html.content-size-9xl {
-    --line-height-base: 127.0;
+    --line-height-base: 133.0;
   }
   html.content-size-10xl {
-    --line-height-base: 123.0;
+    --line-height-base: 128.0;
   }
 }
 
 @media print {
   html {
-    --line-height-base: 155.0;
+    --line-height-base: 170.0;
   }
 }
 
@@ -85,6 +93,11 @@ html {
   html {
     --line-height-base-viewport-adjustment: +10;
   }
+}
+
+html {
+  --line-height: calc((var(--line-height-base) + var(--line-height-base-viewport-adjustment)) / 100);
+  line-height: var(--line-height);
 }
 
 /* Spacing */
@@ -123,51 +136,51 @@ html.content-size-3xl {
   --spcg-adjustment: -1;
 }
 html.content-size-4xl {
-  --spcg-adjustment: -1;
+  --spcg-adjustment: -2;
 }
 html.content-size-5xl {
-  --spcg-adjustment: -2
+  --spcg-adjustment: -3
 }
 html.content-size-6xl {
-  --spcg-adjustment: -3;
-}
-html.content-size-7xl {
   --spcg-adjustment: -4;
 }
-html.content-size-8xl {
+html.content-size-7xl {
   --spcg-adjustment: -5;
 }
-html.content-size-9xl {
+html.content-size-8xl {
   --spcg-adjustment: -6;
 }
-html.content-size-10xl {
+html.content-size-9xl {
   --spcg-adjustment: -7;
+}
+html.content-size-10xl {
+  --spcg-adjustment: -8;
 }
 
 /* Compact */
 @media screen and (min-width: 200px) and (max-width: 414px) {
   html {
-    --spcg: 0;
+    --spcg: 10;
   }
 }
 
 /* Regular */
 @media screen and (min-width: 415px) and (max-width: 1250px) {
   html {
-    --spcg: 1;
+    --spcg: 15;
   }
 }
 
 /* ≥Wide */
 @media screen and (min-width: 1251px) {
   html {
-    --spcg: 2;
+    --spcg: 20;
   }
 }
 
 @media print {
   html {
-    --spcg: 0;
+    --spcg: 20;
   }
 }
 
