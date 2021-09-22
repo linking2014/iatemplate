@@ -158,6 +158,9 @@ ol > li:before {
   font-weight: bold;
 }
 
+li > blockquote {
+  margin: calc((29 / 16) * 1em) auto;
+}
 
 /* Intended border color from 200px */
 @media screen and (min-width: 200px) {
