@@ -85,9 +85,9 @@ h6:before {
   top: 0;
   bottom: 0;
   z-index: 1;
-  margin-right: 0.8em;
+  margin-right: 0.6em;
   color: #c6ccd2;
-  font-size: 0.8em;
+  font-size: 0.75em;
   display: flex;
   align-items: center;
 }
