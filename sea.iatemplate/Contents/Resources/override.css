@@ -210,8 +210,7 @@ pre {
 
 code,
 kbd {
-  margin: 0 0.3334em;
-  /*padding: 0.08333em 0.3334em 0.1667em; !* ~1px 2px 2px when font-size: 12px, taking 1px border into account *!*/
+  margin: 0 0.2em;
   padding: 0.08333em 0.3334em; /* ~1px 2px 2px when font-size: 12px, taking 1px border into account */
   font-size: calc((12 / 13) * 1em); /* 0.875em = 14px @ font-size: 16px */
 }
@@ -229,6 +228,6 @@ ol .task-list-item {
 }
 
 mark {
-  padding: 2px 0;
+  padding: 2px 3px;
   border-radius: 3px;
 }
