@@ -211,7 +211,8 @@ pre {
 code,
 kbd {
   margin: 0 0.3334em;
-  padding: 0.08333em 0.3334em 0.1667em; /* ~1px 2px 2px when font-size: 12px, taking 1px border into account */
+  /*padding: 0.08333em 0.3334em 0.1667em; !* ~1px 2px 2px when font-size: 12px, taking 1px border into account *!*/
+  padding: 0.08333em 0.3334em; /* ~1px 2px 2px when font-size: 12px, taking 1px border into account */
   font-size: calc((12 / 13) * 1em); /* 0.875em = 14px @ font-size: 16px */
 }
 
@@ -225,4 +226,9 @@ ol .task-list-item {
 
 .task-list-item-checkbox {
   margin: 0 0 0 calc(-1 * var(--checkbox-size)); /* 0s to overwrite user agent styles */
+}
+
+mark {
+  padding: 2px 0;
+  border-radius: 3px;
 }
