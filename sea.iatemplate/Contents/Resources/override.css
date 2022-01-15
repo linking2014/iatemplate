@@ -69,9 +69,14 @@ h6 {
   position: relative;
 }
 
-h1,
+h1 {
+  font-size: 1.5em;
+  color: #111111;
+}
+
 h2 {
   color: #005CC5;
+  font-size: 1.25em;
 }
 
 h1:before,
@@ -122,6 +127,10 @@ h5 {
   /*margin-bottom: 0;*/
 }
 
+span.hashtag:lang("*") {
+  vertical-align: text-top;
+}
+
 ul,
 ol {
   padding-left: calc((28 / 14) * 1em); /* 2.4285em = 34px for font-size: 14px. em works better for RWD than % */
@@ -166,10 +175,18 @@ li > blockquote {
 @media screen and (min-width: 200px) {
   blockquote {
     border-left: solid 2px #008800;
+    font-size: calc((12 / 13) * 1em); /* 0.875em = 14px @ font-size: 16px */
   }
 
   blockquote p {
+    margin-top: 0.8em;
     color: #008000;
+  }
+
+  blockquote ol {
+    margin-left: 0.5em;
+    margin-top: 0.8em;
+    /*color: #008000;*/
   }
 }
 
@@ -187,12 +204,14 @@ figure {
   margin-top: 0 !important;
 }
 
+/* code */
+
 pre,
 code,
 kbd {
   border-radius: 3px;
   /*background-color: rgba(36, 36, 36, 0.055);*/
-  background-color: var(--color-bg-tertiary);
+  /*background-color: var(--color-bg-tertiary);*/
 }
 
 pre code {
@@ -206,6 +225,7 @@ pre code {
 pre {
   padding: 0;
   overflow: auto;
+  background-color: #f6f8fa;
 }
 
 code,
@@ -213,6 +233,7 @@ kbd {
   margin: 0 0.2em;
   padding: 0.08333em 0.3334em; /* ~1px 2px 2px when font-size: 12px, taking 1px border into account */
   font-size: calc((12 / 13) * 1em); /* 0.875em = 14px @ font-size: 16px */
+  background-color: rgb(239, 241, 243);
 }
 
 .task-list-item {
@@ -230,4 +251,14 @@ ol .task-list-item {
 mark {
   padding: 2px 3px;
   border-radius: 3px;
+}
+
+pre mark {
+  display: inline-block;
+  margin-left: -3px;
+  padding: 0 3px;
+}
+
+hr {
+  border-bottom-color: #d8dee4 !important;
 }

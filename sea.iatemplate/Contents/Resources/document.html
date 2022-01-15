@@ -22,6 +22,24 @@
         let codeBlocks = document.querySelectorAll('pre code');
         [].forEach.call(codeBlocks, function (codeBlock) {
           hljs.highlightBlock(codeBlock);
+            // console.log(codeBlock);
+
+            // 支持 javascript.info 代码高亮
+            let codeBlockHtml = codeBlock.innerHTML;
+
+            codeBlockHtml.replace(/\*\!\*.+?\*\/\!\*/gis, (match, capture) => {
+                // console.log('match', match);
+                // todo 优化
+
+                let matchTmp = match;
+
+                matchTmp = matchTmp.replace(/\*\!\*./s, '<mark>');
+                matchTmp = matchTmp.replace(/.\*\/\!\*/s, '</mark>');
+
+                codeBlockHtml = codeBlockHtml.replace(match, matchTmp);
+            })
+
+            codeBlock.innerHTML = codeBlockHtml;
         });
       });
     });
